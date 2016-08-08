@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>demo.sketch</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script> 
+</head>
+<body>
+<a-scene>
+<a-curvedimage src="img/ui.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
+<a-sky src="img/background.png"><a-root><a-entity geometry="primitive: sphere" material="shader: flat; src: url(img/background.png);" scale="1 1 1"></a-entity></a-root></a-sky>
+<a-entity camera look-controls>
+<a-entity cursor="fuse: true;" position="0 0 -1" scale=".01 .01 .01" geometry="primitive: ring" material="color: #fff; shader: flat">
+</a-entity>
+</a-entity>
+</a-scene>
+</body>
+</html>
