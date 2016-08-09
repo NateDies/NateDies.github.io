@@ -15,6 +15,8 @@ document.querySelector('#cube').addEventListener('click', function () {
 </head>
 <body>
 <a-scene>
+<a-entity id="cube" geometry="primitive: box" material="color: blue"></a-entity>
+
 <a-curvedimage src="img/ui.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
 <a-sky src="img/background.png"><a-root><a-entity geometry="primitive: sphere" material="shader: flat; src: url(img/background.png);" scale="1 1 1"></a-entity></a-root></a-sky>
 <a-entity camera look-controls>
@@ -24,7 +26,6 @@ document.querySelector('#cube').addEventListener('click', function () {
 </a-entity>
 </a-entity>
 
-<a-entity id="cube" geometry="primitive: box" material="color: blue"></a-entity>
 
 </a-scene>
 
