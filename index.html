@@ -1,34 +1,28 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Hello, World! - A-Frame</title>
-    <meta name="description" content="Hello, World! - A-Frame">
-    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
-  </head>
-  
-  <body>
-    <a-scene>
-      <a-cube position="-1 1 1.5" rotation="0 0 0" width="0.8" height="0.8" depth="0.8" color="#FFF" src="img/concrete.jpg">
-      		 <a-animation attribute="rotation" being="click" repeat="indefinite" easing="linear" to="360 360 0" dur="10000"></a-animation>
-      		 <a-event name="mouseenter" scale="1.25 1.25 1.25"></a-event>
-       		 <a-event name="mouseleave" scale="0.8 0.8 0.8"></a-event>
-     </a-cube>
-<!--      <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere> -->
-<!--      <a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>-->
-      <a-plane rotation="-90 0 0" width="5" height="5" color="#FFF" src="img/dirt.jpg"></a-plane>
-      <a-sky src="img/geodesic.png"><a-root><a-entity geometry="primitive: sphere" material="shader: flat; src: url(img/geodesic.png);" scale="1 1 1"></a-entity></a-root></a-sky>
-      
-      <a-light type="spot" color="#333" position="-20 0 0" look-at="a-cube"></a-light>
-      <a-light type="point" color="#AAA" position="0 5 0"></a-light>
-      
-	  <a-camera position="0 2.5 0">
-	  <a-cursor color="#2E3A87">
-	  </a-camera>
-      
-    </a-scene>
-  </body>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hotel Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script> 
+</head>
+
+<body>
+<a-scene>
+
+<a-curvedimage src="img/ui_drink.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
+<a-curvedimage src="img/ui_eat.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
+<a-curvedimage src="img/ui_relax.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
+<a-curvedimage src="img/ui_sleep.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
+<a-curvedimage src="img/ui_check.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
+
+<a-sky src="img/background.png"><a-root><a-entity geometry="primitive: sphere" material="shader: flat; src: url(img/background.png);" scale="1 1 1"></a-entity></a-root></a-sky>
+
+<a-entity camera look-controls>
+<a-entity cursor="fuse: true;" position="0 0 -1" scale=".01 .01 .01" geometry="primitive: ring" material="color: #fff; shader: flat">
+</a-entity>
+</a-entity>
+
+</a-scene>
+</body>
 </html>
-
-
-
