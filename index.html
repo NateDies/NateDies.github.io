@@ -16,6 +16,14 @@
 <!--      <a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>-->
       <a-plane rotation="-90 0 0" width="4" height="4" color="#FFF" src="img/dirt.jpg"></a-plane>
       <a-sky src="img/pattern.png"><a-root><a-entity geometry="primitive: sphere" material="shader: flat; src: url(img/pattern.png);" scale="1 1 1"></a-entity></a-root></a-sky>
+      
+      <a-light type="spot" color="#333" position="-20 0 0" look-at="a-cube"></a-light>
+      <a-light type="point" color="#AAA" position="0 5 0"></a-light>
+      
+	  <a-camera position="0 1.8 0">
+	  <a-cursor color="#2E3A87">
+	  </a-camera>
+      
     </a-scene>
   </body>
 </html>
