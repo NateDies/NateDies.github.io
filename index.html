@@ -1,36 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-<meta charset="utf-8">
-<title>demo.sketch</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<script src="https://aframe.io/releases/0.2.0/aframe.min.js">
-</script> 
-
-</head>
-
-<body>
-<a-scene>
-
-
-<a-curvedimage src="img/ui.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
-<a-sky src="img/background.jpg"><a-root><a-entity geometry="primitive: sphere" material="shader: flat; src: url(img/background.jpg);" scale="1 1 1"></a-entity></a-root></a-sky>
-
-<a-entity camera look-controls>
-<a-entity cursor="fuse: false;" position="0 0 -1" scale="0.01 0.01 0.01" geometry="primitive: ring" material="color: #fff; shader: flat">
-
-  <a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.01 0.01 0.01" to="0.1 0.1 0.1"></a-animation>
-<!--  <a-animation begin="click" attribute="material.opacity" fill="none" from="1" to="0"></a-animation> -->
-<!--  <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="forwards" from="0.1 0.1 0.1" to="0.01 0.01 0.01"></a-animation> -->
-
-</a-entity>
-</a-entity>
-
-</a-scene>
-
-</body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, World! - A-Frame</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+  </head>
+  
+  <body>
+    <a-scene>
+      <a-cube position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1" color="#4CC3D9"></a-cube>
+      <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
 </html>
+
 
 
