@@ -9,8 +9,9 @@
   
   <body>
     <a-scene>
-      <a-cube position="-1 1 1.5" rotation="0 0 0" width="1" height="1" depth="1" color="#FFF" src="img/concrete.jpg">
+      <a-cube position="-1 1 1.5" rotation="0 0 0" width="0.8" height="0.8" depth="0.8" color="#FFF" src="img/concrete.jpg">
       		 <a-animation attribute="rotation" repeat="indefinite" easing="linear" to="360 360 0" dur="10000"></a-animation>
+      		 <a-event name="mouseenter" scale="1.25 1.25 1.25"></a-event>
       </a-cube>
 <!--      <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere> -->
 <!--      <a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>-->
