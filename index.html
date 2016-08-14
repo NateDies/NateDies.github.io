@@ -17,11 +17,18 @@
 <body>
 <a-scene>
 
+<a-entity geometry="primitive: plane; height: 2; width: 2"
+				class="sleep"
+                material="color: #4CC3D9"
+                position="0 0 -2" rotation="0 0 0" material="side: double"></a-entity>
+
+<!--
 <a-curvedimage class="drink" src="img/ui_drink.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
 <a-curvedimage class="eat" src="img/ui_eat.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
 <a-curvedimage class="relax" src="img/ui_relax.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
 <a-curvedimage class="sleep" src="img/ui_sleep.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
 <a-curvedimage class="check" src="img/ui_check.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
+-->
 
 <a-sky src="img/background.jpg"></a-sky>
 
@@ -30,8 +37,8 @@
 
 <a-entity camera look-controls>
 <a-entity cursor="fuse: true;" position="0 0 -1" scale=".01 .01 .01" geometry="primitive: ring" material="color: #fff; shader: flat">
-	<a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.01 0.01 0.01" to="0.1 0.1 0.1"></a-animation>
-	<a-animation begin="fusing" easing="ease-in" attribute="scale" fill="forwards" from="1 1 1" to="0.1 0.1 0.1"></a-animation>
+<!--	<a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.01 0.01 0.01" to="0.1 0.1 0.1"></a-animation> -->
+<!--	<a-animation begin="fusing" easing="ease-in" attribute="scale" fill="forwards" from="1 1 1" to="0.1 0.1 0.1"></a-animation> -->
 </a-entity>
 </a-entity>
 
