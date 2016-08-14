@@ -1,65 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Hotel Demo</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://aframe.io/releases/0.2.0/aframe.min.js">
-</script> 
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, World! • A-Frame</title>
+    <meta name="description" content="Hello, World! • A-Frame">
+    <script src="../../../dist/aframe.js"></script>
+  </head>
+  <body>
+    <a-scene>
 
-<script src="https://code.jquery.com/jquery-3.1.0.min.js"
-	integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
-	crossorigin="anonymous">
-</script>
+      <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-box position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1"  color="#4CC3D9"></a-box>
+      <a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
 
-</head>
-
-<body>
-<a-scene>
-
-<a-entity geometry="primitive: sphere; radius: 1"
-				class="home"
-                material="color: #000"
-                position="0 0 0"></a-entity>
-
-<a-entity geometry="primitive: plane; height: 2; width: 2"
-				class="sleep"
-                material="color: #FFF; opacity: 0.5"
-                position="0 0 0" rotation="0 0 0" material="side: double"></a-entity>
-
-
-
-<!--
-<a-curvedimage class="drink" src="img/ui_drink.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
-<a-curvedimage class="eat" src="img/ui_eat.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
-<a-curvedimage class="relax" src="img/ui_relax.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
-<a-curvedimage class="sleep" src="img/ui_sleep.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
-<a-curvedimage class="check" src="img/ui_check.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
--->
-
-<a-sky src="img/background.jpg"></a-sky>
-
-<!-- Root entity option for a-sky -->
-<!-- <a-root><a-entity geometry="primitive: sphere" material="shader: flat; src: url(img/background.jpg);" scale="1 1 1"></a-entity></a-root> -->
-
-<a-entity camera look-controls>
-<a-entity cursor="fuse: false;" position="0 0 -1" scale=".01 .01 .01" geometry="primitive: ring" material="color: #fff; shader: flat">
-<!--	<a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.01 0.01 0.01" to="0.1 0.1 0.1"></a-animation> -->
-<!--	<a-animation begin="fusing" easing="ease-in" attribute="scale" fill="forwards" from="1 1 1" to="0.1 0.1 0.1"></a-animation> -->
-</a-entity>
-</a-entity>
-
-</a-scene>
-</body>
-<script>
-	$('a-entity.sleep').click(function() {
-		console.log('You clicked me');
-		$('a-sky').attr('src','img/room.jpg');
-	});
-	
-	$('a-entity.home').click(function() {
-		console.log('You went home');
-		$('a-sky').attr('src','img/background.jpg');
-	});
-</script>
+      <a-sky color="#ECECEC"></a-sky>
+      <a-entity position="0 0 3.8">
+        <a-camera></a-camera>
+      </a-entity>
+    </a-scene>
+  </body>
 </html>
