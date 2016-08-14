@@ -17,13 +17,15 @@
 <body>
 <a-scene>
 
-<a-curvedimage src="img/ui_drink.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
-<a-curvedimage src="img/ui_eat.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
-<a-curvedimage src="img/ui_relax.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
-<a-curvedimage src="img/ui_sleep.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
-<a-curvedimage src="img/ui_check.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
+<a-curvedimage class="drink" src="img/ui_drink.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
+<a-curvedimage class="eat" src="img/ui_eat.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
+<a-curvedimage class="relax" src="img/ui_relax.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
+<a-curvedimage class="sleep" src="img/ui_sleep.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
+<a-curvedimage class="check" src="img/ui_check.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
 
 <a-sky src="img/background.jpg"></a-sky>
+
+<!-- Root entity option for a-sky -->
 <!-- <a-root><a-entity geometry="primitive: sphere" material="shader: flat; src: url(img/background.jpg);" scale="1 1 1"></a-entity></a-root> -->
 
 <a-entity camera look-controls>
@@ -33,4 +35,9 @@
 
 </a-scene>
 </body>
+<script>
+	$('a-curvedimage.sleep').click(function() {
+		$('a-sky').attr('src','img/room.jpg');
+	});
+</script>
 </html>
