@@ -21,6 +21,11 @@
 				class="sleep"
                 material="color: #FFF; opacity: 0.5"
                 position="0 0 -2" rotation="0 0 0" material="side: double"></a-entity>
+                
+<a-entity geometry="primitive: circle; radius: .1"
+				class="home"
+                material="color: #FFF; opacity: 0.5"
+                position="0 -3 0" rotation="0 0 0" material="side: double"></a-entity>
 
 <!--
 <a-curvedimage class="drink" src="img/ui_drink.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3"></a-curvedimage>
@@ -48,6 +53,11 @@
 	$('a-entity.sleep').click(function() {
 		console.log('You clicked me');
 		$('a-sky').attr('src','img/room.jpg');
+	});
+	
+	$('a-entity.home').click(function() {
+		console.log('You went home');
+		$('a-sky').attr('src','img/background.jpg');
 	});
 </script>
 </html>
