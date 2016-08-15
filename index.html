@@ -5,6 +5,13 @@
     <title>Visa Innovation Lab</title>
     <meta name="description" content="Visa Innovation Lab Demo">
     <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"
+		integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+		crossorigin="anonymous">
+	</script>
+
+    
   </head>
   
   <body>
@@ -43,7 +50,7 @@
      <a-circle radius="5" position="0 -10 0" rotation="-90 0 0" color="#FFF" src="img/visa_logo.jpg">
      </a-circle>
      
-      <a-sky class="background" src="img/lab_car_1.JPG"></a-sky>
+      <a-sky src="img/lab_car_1.JPG"></a-sky>
 
       
 	  <a-camera position="0 0 0">
@@ -54,4 +61,32 @@
       
     </a-scene>
   </body>
+
+<script>
+	$('a-entity.enter').click(function() {
+		$('a-sky').attr('src','img/lab_car_1.JPG');
+	});
+	
+	$('a-entity.car').click(function() {
+		$('a-sky').attr('src','img/lab_car_2.JPG');
+	});
+
+	$('a-entity.home').click(function() {
+		$('a-sky').attr('src','img/lab_home_1.JPG');
+	});
+
+	$('a-entity.entertain').click(function() {
+		$('a-sky').attr('src','img/lab_home_2.JPG');
+	});
+
+	$('a-entity.retail').click(function() {
+		$('a-sky').attr('src','img/lab_retail_1.JPG');
+	});
+
+	$('a-entity.checkout').click(function() {
+		$('a-sky').attr('src','img/lab_retail_2.JPG');
+	});
+
+</script>
+
 </html>
