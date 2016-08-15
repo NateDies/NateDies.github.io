@@ -17,32 +17,42 @@
   <body>
     <a-scene>
     
-    <a-curvedimage class="enter" src="img/button_enter.png" radius="6" height="1" theta-start="158" theta-length="45" position="0 -4 0">
+	<a-assets>
+		<img id="btn-enter" src="img/button_enter.png">
+		<img id="btn-car" src="img/button_car.png">
+		<img id="btn-home" src="img/button_home.png">
+		<img id="btn-entertain" src="img/button_entertain.png">
+		<img id="btn-retail" src="img/button_retail.png">
+		<img id="btn-checkout" src="img/button_checkout.png">
+		<!-- <video id="video" src="video.mp4"></video> -->
+	</a-assets>
+    
+    <a-curvedimage class="enter" src="#btn-enter" radius="6" height="1" theta-start="158" theta-length="45" position="0 -4 0">
 		<a-event name="mouseenter" scale="1.05 1.05 1.05"></a-event>
 		<a-event name="mouseleave" scale="1 1 1"></a-event>
 	</a-curvedimage>
 
-    <a-curvedimage class="car" src="img/button_car.png" radius="6" height="1" theta-start="108" theta-length="45" position="0 -4 0">
+    <a-curvedimage class="car" src="#btn-car" radius="6" height="1" theta-start="108" theta-length="45" position="0 -4 0">
 		<a-event name="mouseenter" scale="1.05 1.05 1.05"></a-event>
 		<a-event name="mouseleave" scale="1 1 1"></a-event>
     </a-curvedimage>
     
-    <a-curvedimage class="home" src="img/button_home.png" radius="6" height="1" theta-start="58" theta-length="45" position="0 -4 0">
+    <a-curvedimage class="home" src="#btn-home" radius="6" height="1" theta-start="58" theta-length="45" position="0 -4 0">
 		<a-event name="mouseenter" scale="1.05 1.05 1.05"></a-event>
 		<a-event name="mouseleave" scale="1 1 1"></a-event>
     </a-curvedimage>
     
-    <a-curvedimage class="entertain" src="img/button_entertain.png" radius="6" height="1" theta-start="8" theta-length="45" position="0 -4 0">
+    <a-curvedimage class="entertain" src="#btn-entertain" radius="6" height="1" theta-start="8" theta-length="45" position="0 -4 0">
 		<a-event name="mouseenter" scale="1.05 1.05 1.05"></a-event>
 		<a-event name="mouseleave" scale="1 1 1"></a-event>
     </a-curvedimage>
     
-    <a-curvedimage class="retail" src="img/button_retail.png" radius="6" height="1" theta-start="318" theta-length="45" position="0 -4 0">
+    <a-curvedimage class="retail" src="#btn-retail" radius="6" height="1" theta-start="318" theta-length="45" position="0 -4 0">
 		<a-event name="mouseenter" scale="1.05 1.05 1.05"></a-event>
 		<a-event name="mouseleave" scale="1 1 1"></a-event>
     </a-curvedimage>
     
-    <a-curvedimage class="checkout" src="img/button_checkout.png" radius="6" height="1" theta-start="268" theta-length="45" position="0 -4 0">
+    <a-curvedimage class="checkout" src="#btn-checkout" radius="6" height="1" theta-start="268" theta-length="45" position="0 -4 0">
 		<a-event name="mouseenter" scale="1.05 1.05 1.05"></a-event>
 		<a-event name="mouseleave" scale="1 1 1"></a-event>
     </a-curvedimage>
