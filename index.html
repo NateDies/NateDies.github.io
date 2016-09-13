@@ -1,108 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Visa Innovation Lab</title>
-    <meta name="description" content="Visa Innovation Lab Demo">
-    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
-    
-    <script src="https://code.jquery.com/jquery-3.1.0.min.js"
+	<head>
+		<meta charset="utf-8">
+		<title>Visa Innovation Lab 360 Video Tour</title>
+		<meta name="description" content="Visa Innovation Lab 360 Video Tour">
+		<script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.1.0.min.js"
 		integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
 		crossorigin="anonymous">
-	</script>
+		</script>
+	</head>
 
-    
-  </head>
-  
-  <body>
-    <a-scene>
-    
-	<a-assets>
-		<img id="btn-enter" src="img/button_enter.png">
-		<img id="btn-car" src="img/button_car.png">
-		<img id="btn-home" src="img/button_home.png">
-		<img id="btn-entertain" src="img/button_entertain.png">
-		<img id="btn-retail" src="img/button_retail.png">
-		<img id="btn-checkout" src="img/button_checkout.png">
-		<img id="bg-enter" src="img/lab_car_1.JPG">
-		<img id="bg-car" src="img/lab_car_2.JPG">
-		<img id="bg-home" src="img/lab_home_1.JPG">
-		<img id="bg-entertain" src="img/lab_home_2.JPG">
-		<img id="bg-retail" src="img/lab_retail_1.JPG">
-		<img id="bg-checkout" src="img/lab_retail_2.JPG">
-		<!-- <video id="video" src="video.mp4"></video> -->
-	</a-assets>
-    
-    <a-curvedimage class="enter" src="#btn-enter" radius="6" height="1" theta-start="158" theta-length="45" position="0 -4 0">
-		<a-event name="mouseenter" scale="1.05 1.05 1.05"></a-event>
-		<a-event name="mouseleave" scale="1 1 1"></a-event>
-	</a-curvedimage>
+	<body>
+		<a-scene>
 
-    <a-curvedimage class="car" src="#btn-car" radius="6" height="1" theta-start="108" theta-length="45" position="0 -4 0">
-		<a-event name="mouseenter" scale="1.05 1.05 1.05"></a-event>
-		<a-event name="mouseleave" scale="1 1 1"></a-event>
-    </a-curvedimage>
-    
-    <a-curvedimage class="home" src="#btn-home" radius="6" height="1" theta-start="58" theta-length="45" position="0 -4 0">
-		<a-event name="mouseenter" scale="1.05 1.05 1.05"></a-event>
-		<a-event name="mouseleave" scale="1 1 1"></a-event>
-    </a-curvedimage>
-    
-    <a-curvedimage class="entertain" src="#btn-entertain" radius="6" height="1" theta-start="8" theta-length="45" position="0 -4 0">
-		<a-event name="mouseenter" scale="1.05 1.05 1.05"></a-event>
-		<a-event name="mouseleave" scale="1 1 1"></a-event>
-    </a-curvedimage>
-    
-    <a-curvedimage class="retail" src="#btn-retail" radius="6" height="1" theta-start="318" theta-length="45" position="0 -4 0">
-		<a-event name="mouseenter" scale="1.05 1.05 1.05"></a-event>
-		<a-event name="mouseleave" scale="1 1 1"></a-event>
-    </a-curvedimage>
-    
-    <a-curvedimage class="checkout" src="#btn-checkout" radius="6" height="1" theta-start="268" theta-length="45" position="0 -4 0">
-		<a-event name="mouseenter" scale="1.05 1.05 1.05"></a-event>
-		<a-event name="mouseleave" scale="1 1 1"></a-event>
-    </a-curvedimage>
-     
-     <a-circle radius="5" position="0 -10 0" rotation="-90 0 0" color="#FFF" src="img/visa_logo.jpg">
-     </a-circle>
-     
-      <a-sky src="#bg-enter"></a-sky>
+		<a-assets>
+			<video id="tour" autoplay loop="true" src="img/Lab-Video-Tour.mp4"></video>
+			<img id="base" src="img/visa_logo.jpg">
+			<img id="bg" src="img/sky.jpg">
+		</a-assets>
 
-      
-	  <a-camera position="0 0 0">
-	  <a-cursor fuse="true" position="0 0 -1" scale="0.01 0.01 0.01" geometry="primitive: ring" material="color: #fff; shader: flat">
-	  <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="backwards" from="0.01 0.01 0.01" to="0.05 0.05 0.05"></a-animation>
-	  </a-cursor>
-	  </a-camera>
-      
-    </a-scene>
-  </body>
+		<a-videosphere src="#tour"></a-videosphere>
 
-<script>
-	$('a-curvedimage.enter').click(function() {
-		$('a-sky').attr('src','#bg-enter');
-	});
-	
-	$('a-curvedimage.car').click(function() {
-		$('a-sky').attr('src','#bg-car');
-	});
 
-	$('a-curvedimage.home').click(function() {
-		$('a-sky').attr('src','#bg-home');
-	});
+		<a-circle radius="5" position="0 -10 0" rotation="-90 0 0" color="#FFF" src="#base">
+		</a-circle>
 
-	$('a-curvedimage.entertain').click(function() {
-		$('a-sky').attr('src','#bg-entertain');
-	});
+		<a-sky src="#bg"></a-sky>
 
-	$('a-curvedimage.retail').click(function() {
-		$('a-sky').attr('src','#bg-retail');
-	});
 
-	$('a-curvedimage.checkout').click(function() {
-		$('a-sky').attr('src','#bg-checkout');
-	});
+		<a-camera position="0 0 0">
+			<a-cursor fuse="true" position="0 0 -1" scale="0.01 0.01 0.01" geometry="primitive: ring" material="color: #fff; shader: flat">
+				<a-animation begin="fusing" easing="ease-in" attribute="scale" fill="backwards" from="0.01 0.01 0.01" to="0.05 0.05 0.05"></a-animation>
+			</a-cursor>
+		</a-camera>
 
-</script>
+		</a-scene>
+	</body>
+
+	<script></script>
 
 </html>
